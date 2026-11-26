@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin no/" /etc/ssh/sshd_config
+
+sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/" /etc/ssh/sshd_config
+
+sed -i "s/GSSAPIAuthentication yes/#GSSAPIAuthentication no/" /etc/ssh/sshd_config.d/50-redhat.conf
+
+systemctl restart sshd
+
