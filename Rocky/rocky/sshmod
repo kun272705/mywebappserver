@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 chmod 700 ~/.ssh/
 chmod 444 ~/.ssh/id_ed25519.pub
